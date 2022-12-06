@@ -1,0 +1,95 @@
+
+body {
+	scrollbar-face-color: #CCCCCC;
+	scrollbar-shadow-color: #999999;
+	scrollbar-highlight-color: #999999;
+	scrollbar-3dlight-color: #EAEAEA;
+	scrollbar-darkshadow-color: #EAEAEA;
+	scrollbar-track-color: #EAEAEA;
+	scrollbar-arrow-color: #999999;
+}
+
+.menu {
+	color: #336699;
+	font-family: "Times New Roman", "свт╡";
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.menu:hover {
+	color: #D08000;
+	font-family: "Times New Roman", "свт╡";
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.foot {
+	color: #909090;
+	font-family: "Times New Roman", "свт╡";
+	font-size: 12px;
+}
+
+.footlink {
+	color: #909090;
+	font-family: "Times New Roman", "свт╡";
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.footlink:hover {
+	color: #333333;
+	font-family: "Times New Roman", "свт╡";
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.articletitle {
+	color: #EE7700;
+	font-family: "Arial", "свт╡";
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.article {
+	color: #555577;
+	font-family: "Times New Roman", "свт╡";
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 18px;
+}
+
+.articlesubtitle {
+	color: #555577;
+	font-family: "Times New Roman", "свт╡";
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.articlehead {
+	color: #555533;
+	font-family: "Times New Roman", "свт╡";
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 18px;
+	font-weight: bold;
+}
+
+.articlelink {
+	color: #0077EE;
+	font-family: "Times New Roman", "свт╡";
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.articlelink:hover {
+	color: #EE4400;
+	font-family: "Times New Roman", "свт╡";
+	font-size: 12px;
+	text-decoration: none;
+}
