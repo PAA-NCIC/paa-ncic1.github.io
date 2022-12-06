@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>C++ code colored by C++2HTML</title>
+<meta name="generator" content="C++2HTML by Jasper Bedaux">
+<!-- To generate your own colored code visit http://www.bedaux.net/cpp2html/ -->
+<style type="text/css">
+.comment { color: #999999; font-style: italic; }
+.pre { color: #000099; }
+.string { color: #009900; }
+.char { color: #009900; }
+.float { color: #996600; }
+.int { color: #999900; }
+.bool { color: #000000; font-weight: bold; }
+.type { color: #FF6633; }
+.flow { color: #FF0000; }
+.keyword { color: #990000; }
+.operator { color: #663300; font-weight: bold; }
+.operator { color: #663300; font-weight: bold; }
+</style>
+</head>
+<body>
+<pre><span class="pre">
+
+#ifndef _GRE_APP_SSSP_HPP
+#define _GRE_APP_SSSP_HPP
+
+#include "Types.hpp"
+#include "VertexCode/VertexCode.hpp"
+#include "Graph/VertexSet.hpp"
+#include "Graph/DistributedGraph.hpp"
+#include "Graph/LocalGraph.hpp"
+</span><span class="keyword">
+typedef</span> uint32_t dist_t<span class="operator">;</span><span class="keyword">
+typedef</span> dist_t vertex_data_t<span class="operator">;</span><span class="keyword">
+typedef</span> dist_t scatter_data_t<span class="operator">;</span><span class="keyword">
+typedef</span> dist_t combine_data_t<span class="operator">;</span><span class="keyword">
+
+typedef</span> GRE<span class="operator">::</span>Graph<span class="operator">::</span>DistributedGraph<span class="operator">&lt;</span>GRE<span class="operator">::</span>Graph<span class="operator">::</span>GraphInCSR<span class="operator">&gt;</span> DistributedGraph_t<span class="operator">;</span><span class="keyword">
+typedef</span>	GRE<span class="operator">::</span>VertexCode<span class="operator">&lt;</span>vertex_data_t<span class="operator">,</span> scatter_data_t<span class="operator">,</span> combine_data_t<span class="operator">,</span> DistributedGraph_t<span class="operator">&gt;</span> SSSP_Base<span class="operator">;</span><span class="keyword">
+
+class</span> SSSP<span class="operator">:</span><span class="keyword"> public</span> SSSP_Base<span class="operator">{</span><span class="keyword">
+public</span><span class="operator">:</span>
+	SSSP<span class="operator">(</span>DistributedGraph_t<span class="operator">&amp;</span> dg<span class="operator">):</span>SSSP_Base<span class="operator">(</span>dg<span class="operator">),</span> states<span class="operator">(</span>NULL<span class="operator">),</span>lastStates<span class="operator">(</span>NULL<span class="operator">),</span> edgeWgt<span class="operator">(</span>NULL<span class="operator">){}
+	~</span>SSSP<span class="operator">(){}</span><span class="type">
+
+	void</span> alloc<span class="operator">(){</span>
+		allocScatterData<span class="operator">(</span>lastStates<span class="operator">);</span>
+		allocCombineData<span class="operator">(</span>states<span class="operator">,</span> std<span class="operator">::</span>numeric_limits<span class="operator">&lt;</span>dist_t<span class="operator">&gt;::</span>max<span class="operator">());</span>
+		allocVertexData<span class="operator">(</span>states<span class="operator">);
+	}</span><span class="type">
+	void</span> free<span class="operator">(){</span>
+		freeScatterData<span class="operator">(</span>lastStates<span class="operator">);</span>
+		freeCombineData<span class="operator">(</span>states<span class="operator">);</span>
+		freeVertexData<span class="operator">(</span>states<span class="operator">);
+	}</span><span class="type">
+	void</span> loadEdgeProperty<span class="operator">(</span><span class="keyword">const</span> std<span class="operator">::</span>string filename<span class="operator">){</span>
+		graph<span class="operator">.</span>loadEdgeProperty<span class="operator">(</span>edgeWgt<span class="operator">,</span> filename<span class="operator">);
+	}</span><span class="type">
+	void</span> loadEdgeProperty<span class="operator">(){</span>
+		graph<span class="operator">.</span>loadEdgeProperty<span class="operator">(</span>edgeWgt<span class="operator">);
+	}</span><span class="type">
+	void</span> unloadEdgeProperty<span class="operator">(){</span>
+		graph<span class="operator">.</span>unloadEdgeProperty<span class="operator">(</span>edgeWgt<span class="operator">);
+	}</span><span class="keyword">
+private</span><span class="operator">:</span>
+	vertex_data_t<span class="operator">*</span> states<span class="operator">;</span>
+	scatter_data_t<span class="operator">*</span> lastStates<span class="operator">;</span>
+	dist_t<span class="operator">*</span> edgeWgt<span class="operator">;</span><span class="keyword">
+public</span><span class="operator">:</span><span class="comment">
+	//Init
+</span><span class="keyword">	inline</span><span class="type"> bool</span> init<span class="operator">(</span><span class="keyword">const</span> lvid_t lv<span class="operator">){</span>
+		states<span class="operator">[</span>lv<span class="operator">] =</span><span class="int"> 0</span><span class="operator">;</span>
+		lastStates<span class="operator">[</span>lv<span class="operator">] =</span> states<span class="operator">[</span>lv<span class="operator">];</span><span class="comment">//same with states.
+</span><span class="flow">		return</span><span class="bool"> true</span><span class="operator">;
+	}</span><span class="comment">
+
+	//Scatter
+</span><span class="keyword">	template</span><span class="operator"> &lt;</span><span class="keyword">typename</span> Ctx_t<span class="operator">,</span><span class="keyword"> typename</span> EdgeIterator_t<span class="operator">&gt;</span><span class="keyword">
+	inline</span><span class="type"> void</span> scatter<span class="operator">(</span>Ctx_t<span class="operator">&amp;</span> ctx<span class="operator">,</span><span class="keyword"> const</span> lvid_t lsrc<span class="operator">,</span><span class="keyword"> const</span> lvid_t ldst<span class="operator">,</span><span class="keyword"> const</span> EdgeIterator_t<span class="operator">&amp;</span> it<span class="operator">){</span><span class="keyword">
+		const</span> leid_t leid<span class="operator"> =</span> graph<span class="operator">.</span>refLocalGraph<span class="operator">().</span>leid<span class="operator">(</span>it<span class="operator">);</span><span class="keyword">
+		const</span> dist_t dist<span class="operator"> =</span> lastStates<span class="operator">[</span>lsrc<span class="operator">] +</span> edgeWgt<span class="operator">[</span>leid<span class="operator">];</span>
+		scatter_data_t msg_data<span class="operator">(</span>dist<span class="operator">);</span>
+		ctx<span class="operator">.</span>engine<span class="operator">-&gt;</span>sendMessage<span class="operator">(</span>ctx<span class="operator">,</span> ldst<span class="operator">,</span> msg_data<span class="operator">);
+	}</span><span class="comment">
+
+	//Combine
+</span><span class="keyword">	template</span><span class="operator"> &lt;</span><span class="keyword">typename</span> Lock_t<span class="operator">&gt;</span><span class="keyword">
+	inline</span><span class="type"> bool</span> combine<span class="operator">(</span><span class="keyword">const</span> lvid_t ldst<span class="operator">,</span><span class="keyword"> const</span> combine_data_t<span class="operator">&amp;</span> msg_data<span class="operator">,</span> Lock_t<span class="operator">&amp;</span> lock<span class="operator">){</span><span class="flow">
+		if</span><span class="operator">(</span>msg_data<span class="operator"> &lt;</span> states<span class="operator">[</span>ldst<span class="operator">]){</span>
+			lock<span class="operator">.</span>spinLock<span class="operator">();</span><span class="flow">
+			if</span><span class="operator">(</span>msg_data<span class="operator"> &lt;</span> states<span class="operator">[</span>ldst<span class="operator">]){</span>
+				states<span class="operator">[</span>ldst<span class="operator">] =</span> msg_data<span class="operator">;</span>
+				lock<span class="operator">.</span>unLock<span class="operator">();</span><span class="flow">
+				return</span><span class="bool"> true</span><span class="operator">;
+			}</span>
+			lock<span class="operator">.</span>unLock<span class="operator">();
+		}</span><span class="flow">
+		return</span><span class="bool"> false</span><span class="operator">;
+	}</span><span class="comment">
+
+	//Apply
+</span><span class="keyword">	inline</span><span class="type"> bool</span> apply<span class="operator">(</span><span class="keyword">const</span> lvid_t lv<span class="operator">){</span>
+		lastStates<span class="operator">[</span>lv<span class="operator">] =</span> states<span class="operator">[</span>lv<span class="operator">];</span><span class="flow">
+		return</span><span class="bool"> true</span><span class="operator">;
+	}
+
+};</span><span class="pre"> 
+#endif
+</span></pre>
+
+
+</body></html>
