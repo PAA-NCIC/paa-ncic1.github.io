@@ -1,0 +1,95 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+   <title> DGEMM on ATI </title>
+</head>
+<body>
+<font face="Calibri" size=4>
+
+<h1 align=center><b>HDGEMM: a Hybrid DGEMM library on a Heterogeneous Architecture with CPU and ATI GPU</b></h1>
+
+<h2><b>Abstract</b></h2>
+In a heterogeneous architecture, data transfer between CPU and GPU is a performance critical factor in real applications. In this paper we present a Hybrid Double-precision GEneral Matrix Mul-tiplication (HDGEMM) library, which overlaps data transfer with DGEMM computation on a heterogeneous system of CPU and ATI GPU. With respect to the effect of software pipelining on reducing the overhead of data transfer, we develop three pipelining DGEMM algorithms: double buffering, data reuse and data placement. On ATI RadeonTM HD5970, HDGEMM achieves 758GFLOP/s with an efficiency of 82%, which is more than 2 times higher than the latest AMD library ACML-GPU v1.1.2. It also achieves 844GFLOP/s with an efficiency of 80% on a heter-ogeneous system of Intel Westmere EP and ATI RadeonTM HD5970. Further, we measure the intra-node scalability of HDGEMM library. When scaling to multiple CPUs and GPUs, it is found that the efficiency decreases with more computing units, though HDGEMM performance increases progressively. We per-form a comprehensive analysis on the influencing factors, and identify that it is the resource contention (especially PCIe and system memory contention) that harms HDGEMM scalability on a heterogeneous system.
+
+<h2><b>Initial algorithm</b></h2>
+To better clarify, we divide DGEMM executing process into four steps
+<table border cellpadding=5>
+<tr><th colspan=2>DGEMM executing steps</th>
+<tr><td> Step1 </td>  <td><i>Load1</i>: Copy A/B matrix from user space to PCIe space though system bus </td>
+<tr><td> Step2 </td>  <td><i>Load2</i>: Transfer A/B matrix from PCIe space to GPU memory though PCIe bus </td>
+<tr><td> Step3 </td>  <td><i> Mult</i>: Calculate the A and B multiplication on GPU device, and write back C matrix results to PCIe space</td>
+<tr><td> Step4 </td>  <td><i> Store</i>: Write C matrix from PCIe space to user space </td>
+</table>
+<br>
+<b>Figure 1. Resource allocation in each step of Algorithm 1</b>
+<p align="left"><img border="0" src="./ati_images/Resource_allocation_1.jpg" width="353" height="191"> <br>
+
+<h2><b>Optimized Pipelining Algorithm</b></h2>
+
+<li><h3><b> Double Buffering </b></h3>
+Shown from Figure.1, <i>Mult</i> and <i>Store2</i> have no resource confict. We create two buffers in PCIe cache for C to execute two tasks in pipeline. <br><i>Mult</i> of WU2 can overlap with <i>Store1</i> of WU1.
+
+<li><h3><b> Data Reuse </b></h3>
+
+<li><h3><b> Data Placement </b></h3>
+
+We diverge <i>Store1</i> from <i>Mult</i>. Firstly, we write the data to GPU memory, then transfer the data to PCIe memory. In this way, we can utilize DMA controller for data transfer between PCIe space and GPU memory. Thus, we accelerate data transferring and alleviate CPU and GPU burden. 
+<br>The new resource arrangement is listed as follows:
+<p align="left"><img border="0" src="./ati_images/Resource_allocation_2.jpg" width="334" height="216"> 
+
+<hr>
+<font face="Cambria" size=4>
+<h2><b>Experiment Results and Analysis</b></h2>
+<h3><b>Experiment Results</b></h3>
+<p align="left"><img border="0" src="./ati_images/performance.jpg" width="512" height="313">
+<table border width=1200> 
+<tr><td> <font face="Cambria" size=3> DGEMM1.* represents the correspond Optimizations above. DGEMM1.1-1.3 are the optimizations on GPU, and DGEMM1.4 is the hybrid version on CPU+GPU. The X-axis represents the matrix scale of M(N), K=4096</th>
+</font></table>
+
+<hr>
+<h2><b>Scalability of HDGEMM</b></h2>
+<p align="left"><img border="0" src="./ati_images/efficiency_decrease.jpg" width="543" height="250">
+
+<h3><b>Scalability of Multiple GPUs</b></h3>
+<table cellpadding=1>
+<tr><td>
+<p align="left"><img border="0" src="./ati_images/PCIe_bandwidth.jpg" width="518" height="240">
+<td>
+<p align="left"><img border="0" src="./ati_images/memory_bandwidth.jpg" width="535" height="249">
+</table>
+
+<h3><b>Scalability of Hybrid CPUs and GPUs</b></h3>
+<p align="left"><img border="0" src="./ati_images/CPU_performance_compare.jpg" width="549" height="275">
+
+
+<hr>
+<font face="Cambria">
+<table border="0">
+<td width=150>
+<h2><b>Code</b></h2>
+<ul>
+<li><a href="./dgemm_ati.tgz"><h2>dgemm_ati.tgz</h2></a>
+</ul>
+</td>
+</table>
+</font>
+
+<hr>
+<font face="Cambria">
+<table border="0">
+<td width=2500>
+<h2><b>Paper</b></h2>
+<ul>
+<li><a href="./ics195_li.pdf"><h2>An Optimized Large-Scale Hybrid DGEMM Design for CPUs and ATI GPUs</h2> </a> the 26th ACM International Conference on Supercomputing (ICS), 2012 
+</ul>
+</td>
+</table>
+
+</font>
+</body>
+</html>
+
+
+

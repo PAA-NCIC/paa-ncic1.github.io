@@ -1,0 +1,90 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+   <title> DGEMM on ATI </title>
+</head>
+<body>
+<font face="Calibri">
+
+<h1 align=center><b>High Performance DGEMM on ATI</b></h1>
+<h2><b>Optimization Methods</b></h2>
+<ul>
+To be more clear, we divide the DGEMM executing process into four steps.
+<table border cellpadding=5>
+<tr><th colspan=2>DGEMM executing steps</th>
+<tr><td> Step1 </td>  <td>Load1: Copy A/B matrix from user space to PCIe space though system bus </td>
+<tr><td> Step2 </td>  <td>Load2: Transfer A/B matrix from PCIe space to GPU memory though PCIe bus </td>
+<tr><td> Step3 </td>  <td> Mult&Store1: Calculate the A and B multiplication on GPU device, and write back the results of C matrix to GPU memory</td>
+<tr><td> Step4 </td>  <td> Stor2: Write C matrix from PCIe space to user space </td>
+</table>
+<br>The resources used by each step are shown in the Figure.1 below:
+<p align="left"><img border="0" src="./images/4.jpg" width="450" height="220"> <br>
+
+<li><h3><b> Store Optimization </b></h3>
+Shown from Figure.1, <i>Mult</i> and <i>Store2</i> have no resource confict. We create two buffers in PCIe cache for C to execute two tasks in pipeline. <br>The Mult step of WU2 can overlap with the Store1 step of WU1.
+<p align="left"><img border="0" src="./images/1.jpg" width="587" height="128"> 
+<br>The performance after Load optimization:
+<p align="left"><img border="0" src="./images/Op1.jpg" width="600" height="400">
+<table border width="600">
+<tr><td>X-axis represents the scale of M (or N), and K is shown in the Opt-* and Init-*. Y-axis represents the DGEMM performance in GigiFLOPS. The red bars below represent the performance of Opt-* is worse than Init-*.</td>
+</table>
+<br>Store optimization improved DGEMM performance by <font color=red>26.1%</font> in maximum.
+<li><h3><b> Load Optimization</b></h3>
+From Figure.1, <i>Load1</i> and <i>Load2</i> don’t share the same resources, and  <i>Load1</i> and <i>Mult</i> share CPU partly.  So, <i>Load2</i> and <i>Mult</i> overlaps with <i>Load1</i>, and pipelines <i>Mult+Load2</i> with other tasks.
+<p align="left"><img border="0" src="./images/2.jpg" width="600" height="150">
+<br>The performance after Store Optimization:
+<p align="left"><img border="0" src="./images/Op2.jpg" width="600" height="400">
+<br><br>Load optimization further improved DGEMM performance by <font color=red>25.7%</font>.
+<li><h3><b> DMA utilization</b></h3>
+We diverge <i>Store1</i> from <i>Mult</i>. We first write the data to GPU memory, then transfer the data to PCIe memory. In this way, we can utilize DMA method between PCIe space and GPU memory, accelerate data transferring and alleviate CPU and GPU burden. The new resource arrangement is listed as follows:
+<p align="left"><img border="0" src="./images/5.jpg" width="480" height="260"> 
+<table border>
+<tr><td>We suppose data transfer in DMA type do not use CPU and GPU.</td>
+</table>
+The performance after DMA utilization:
+<p align="left"><img border="0" src="./images/Op3.jpg" width="600" height="400">
+<br><br>DMA utilization further improved DGEMM performance by <font color=red>86.4%</font>. So far, we achieved <u><b><font color=red>2.5X</font></b></u> speedup compared to Initial DGEMM with the optimizations for GPU.
+<li><h3><b> Hybrid CPU+GPU</b></h3>
+Except for spending time on transformation, CPU has much spare time. So we split matrix A/B to CPU and GPU, and execute DGEMM on both of them at the same time. The performance is:
+<p align="left"><img border="0" src="./images/Op4.jpg" width="600" height="400">
+<br><br>Hybrid CPU+GPU further improved DGEMM performance by <font color=red>27.3%</font>. To sum up, we achieved <u><b><font color=red>3.1X</font></b></u> speedup compared to Initial DGEMM implementation.
+</ul>
+
+<hr>
+<h2><b>Results</b></h2>
+<table border="0">
+<tr> <th>Single process Performance using single GPU core</th> <th> Double processes Performace using dual GPU cores</th>
+<tr> <td width="50%"> <p align="left"><img border="0" src="./images/perf_1.jpg" width="600" height="400">
+<td width="50%"> <p align="left"><img border="0" src="./images/perf_2.jpg" width="600" height="400">
+<tr> <th colspan=2> DGEMM1.* represents the correspond Optimization above. The X-axis represents the matrix scale of M(N), and K=4096</th>
+</table>
+DGEMM efficiency achieved <font color=red>88.3%</font> of DGEMM1.3 on single GPU core, and <font color=red>85.0%</font> on dual GPU cores. While Hybrid DGEMM efficiency achieved <font color=red>84.3%</font> on single GPU core, and <font color=red>83.5</font> on dual GPU cores.
+
+<hr>
+<table border="0">
+<td width=150>
+<h2><b>Code</b></h2>
+<ul>
+<li><a href="./dgemm_ati.tgz"><h2>dgemm_ati.tgz</h2></a>
+</ul>
+</td>
+</table>
+
+<hr>
+<table border="0">
+<td width=1300>
+<h2><b>Paper</b></h2>
+<ul>
+<li><a href="./dgemm_ati.pdf"><h2>Tuning Matrix Multiplication on a Heterogeneous architecture with CPU and GPU</h2></a>
+</ul>
+</td>
+</table>
+
+</font>
+</body>
+</html>
+
+
+

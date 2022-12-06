@@ -1,0 +1,266 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+   <title> DGEMM on Nvidia<!NVIDIA> </title>
+</head>
+<body leftmargin=100px, rightmargin=100px, topmargin=50px, bottommargin=50px>
+
+<h1 align=center><b>High Performance DGEMM on NVIDIA</b></h1>
+<h2><b>Introduction</b></h2>
+<ul>
+<div style="LINE-HEIGHT:25px">&nbsp&nbsp&nbsp&nbsp
+	Here we present a thorough experience on tuning double-precision 
+matrix-matrix multiplication(DGEMM) on the NVIDIA Fermi GPU architecture. Our optimizations 
+include software pipelining, use of vector memory operations, and instruction scheduling. 
+The optimization strategy is further guided by a performance model based on 
+micro-architecture benchmarks. Our best CUDA algorithm achieves comparable performance 
+with the latest vendor supplied library: CUBLAS 3.2. We further improve upon this with 
+an implementation in the native machine language, leading to a 20% increase in performance 
+over CUBLAS. That is, the achieved peak performance (efficiency) is improved from 302Gflop/s 
+(58%) to 362Gflop/s (70%). <br>
+</div>
+</ul>
+<hr>
+<h2><b>Optimization Methods</b></h2>
+<ul>
+	<li><h3><b> A blocking algorithm of DGEMM as a baseline </b></h3>
+		<div style="LINE-HEIGHT:25px">
+		&nbsp&nbsp&nbsp&nbsp
+		The BLAS specification defines DGEMM as C := alpha *A * B + beta * C, where A, B and C 
+		are m*k, k*n, m*n matrices, respectively. A straightforward implementation of DGEMM is 
+		three nested loops, yet a blocking algorithm often has higher performance on a processor 
+		with a memory hierarchy because blocking matrix-matrix multiplication exploits more data 
+		reuse and achieves higher effective memory bandwidth.<br>
+	  &nbsp&nbsp&nbsp&nbsp
+	  For a blocking DGEMM on the GPU, the three matrices are partitioned into blocks of bm*bk,
+	  bk*bn,bm*bn and these blocks are laid out as grids of M*K,K*N,M*N, where M=m/bm,N=n/bn,K=k/bk.<br><br>
+	  	<table border cellpadding=5>
+	  	<tr><td>The size of thread block: vlx*vly <br> 
+				Register:  accum[rx*ry], //rx*ry is a factor of register blocking<br>
+ 	     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsprA[rx],rB[ry]<br>
+				Shared memory: smA[bk][bm],smB[bk][bn]<br>
+				////////////////////////////////////////////////////////////////////////<br>
+				accum[0...rx][0...ry]=0<br>
+				load one bm*bk block of A into smA[bk][bm]<br>
+				load one bk*bn  block of B into smB[bk][bn]<br>
+				<b>synch</b><br>
+				<b>while</b> (--K&gt0) {<br>&nbsp&nbsp&nbsp&nbsp
+				  <b>for</b> (ki=0;ki&ltbk;ki++) {<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						load one column of A in smA into rA[0...rx]<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						load one row of B in smB into rB[0...ry]<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						accum[0...rx][0...ry]+=rA[0...rx]*rB[0...ry]<br>&nbsp&nbsp&nbsp&nbsp
+					} //end for<br>&nbsp&nbsp&nbsp&nbsp
+				  load one bm*bk block of A into smA[bk][bm]<br>&nbsp&nbsp&nbsp&nbsp
+ 					load one bk*bn  block of B into smB[bk][bn]<br>&nbsp&nbsp&nbsp&nbsp
+				  <b>synch</b><br>
+				} //end while<br>
+				Merge accum[0...rx][0...ry] with bm*bn block of C. <br>
+			</td></table>
+			<b>Algorithm 1.</b> The basic framework of DGEMM routines.<br><br>
+		</div>
+	<li><h3><b> Software prefetching in registers </b></h3>
+		<div style="LINE-HEIGHT:25px">
+			&nbsp&nbsp&nbsp&nbsp
+			The cost (latency) of global memory operations is about 100 times more than that of shared 
+			memory operations, so that the 8 global memory operations take more time to finish. Therefore,
+			 the top priority is latency hiding of global memory operations. We may make use of 
+			 software prefetching to hide the long latency. One way is to load the next block into 
+			 register files just before current block is calculated. Algorithm 2 describes the software
+			  prefetching strategy. As shown by the green line in Figure 1, this optimization improves 
+			  the efficiency to 57%, which is very close to the efficiency of CUBLAS3.2.<br><br>
+			<table border cellpadding=5>
+				<tr><td>
+					The size of thread block: vlx*vly  <br>
+					Register:  accum[rx*ry], //rx*ry is a factor of register blocking<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            		    rA[rx],rB[ry],<font color="red">nrA[rx],nrB[ry]</font><br>
+					Shared memory: smA[bk][bm],smB[bk][bn]<br>
+					///////////////////////////////////////////////////////////////////////<br>
+					accum[0...rx][0...ry]=0<br>
+					load one bm*bk block of A into smA[bk][bm]<br>
+					load one bk*bn  block of B into smB[bk][bn]<br>
+					<b>synch</b><br>
+					<b>while</b> (--K&gt0) {<br>&nbsp&nbsp&nbsp&nbsp
+  					<font color="red">prefetch one bm*bk block of A into nrA[rx]</font><br>&nbsp&nbsp&nbsp&nbsp
+  					<font color="red">prefetch one bk*bn block of B into nrB[ry]</font><br>&nbsp&nbsp&nbsp&nbsp
+  					<b>for</b> (ki=0;ki&ltbk;ki++) {<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							load one column of A in smA into rA[0...rx]<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							load one row of B in smB into rB[0...ry]<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							accum[0...rx][0...ry]+=rA[0...rx]*rB[0...ry]<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						} //end for<br>&nbsp&nbsp&nbsp&nbsp
+  					<font color="red">store nrA[rx] into smA[bk][bm]</font><br>&nbsp&nbsp&nbsp&nbsp
+  					<font color="red">store nrB[ry] into smB[bk][bn]</font><br>&nbsp&nbsp&nbsp&nbsp
+  					<b>synch</b><br>
+					} //end while<br>
+					Merge accum[0...rx][0...ry] with bm*bn block of C.<br>
+			</td></table>
+			<b>Algorithm 2.</b> The algorithm with software prefetching in registers.<br> 
+			The red texts highlight the changes (the same way is used in Algorithm 3).<br><br>
+			<img border="0" src="./nv_images/fig1.jpg" width="600" height="400"><br>
+			<b>Figure 1.</b> The performance of our initial DGEMM routines.<br>
+			&nbsp&nbsp&nbsp&nbsp
+			However, we note that a disadvantage of Algorithm 2 is the use of extra registers, i.e. additional 
+			8 registers are temporarily used to store the next block of matrices A/B. The requirement of more 
+			registers leads to register spilling to local memory.<br><br>
+		</div>
+	<li><h3><b> Data thread mapping & double buffering </b></h3>
+		<div style="LINE-HEIGHT:25px">
+			&nbsp&nbsp&nbsp&nbsp
+			CUDA3.2 on Fermi supports 128-bits load/store operations. Obviously, the use of 128-bits load/store 
+			instructions will increase the ratio of floating-point operations to 256/(64+4+4+256)=78%, which 
+			means that we may achieve 78% efficiency of peak performance.<br>
+			&nbsp&nbsp&nbsp&nbsp
+			The use of 128-bits memory operations leads to different data-thread mapping. If the 128-bit 
+			load instructions are used, we only need 32 threads (one warp), with each thread loading two doubles(
+			128-bits).  Thus we change the thread block of 64*4 to 32*8.<br>
+			<img border="0" src="./nv_images/fig2.jpg" width="600" height="450"><br>
+			<b>Figure 2.</b> Data-thread mapping for data transfer between global memory <br>
+				and shared memory. This picture is split into two parts by the dashed  <br>
+				line. The left part illustrates the mapping in Algorithm 2 using 64-bit <br>
+				 memory operation, the right one illustrates the mapping in Algorithm 3<br>
+				using 128-bit memory operation.<br>
+		
+			&nbsp&nbsp&nbsp&nbsp
+			It is proved that software pipelining using double-buffers in low latency memory is an efficient 
+			method to overlap computation with communication through the memory hierarchy. The double-buffering 
+			algorithm is outlined in Algorithm 3. In the pseudo-code we map <i>smA/B[0...bk/2-1][bm]</i> to buffer 0 in 
+			Figure 2 and <i>smA/B[bk/2-1...bk-1][bm]</i> to buffer 1. Since they operate on different shared memory 
+			buffers, memory operations can proceed in parallel with computing.<br><br>
+			<table border cellpadding=5>
+				<tr><td>
+				The size of thread block: vlx*vly  <br>
+				Register:  accum[rx*ry], //rx*ry is a factor of register blocking <br>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        		        rA[rx],rB[ry] <br>
+				Shared memory: smA[bk][bm],smB[bk][bn] <br>
+				///////////////////////////////////////////////////////////////////////// <br>
+				1. accum[0...rx][0...ry]=0 <br>
+				2. <font color="#ff0000">load one bm*bk/2 block of A into smA[0...bk/2-1][bm]</font> <br>
+				3. <font color="#ff0000">load one bk/2*bn block of B into smB[0...bk/2-1][bn]</font> <br>
+				4. <b>synch</b> <br>
+				5. <b>while</b> (--K&gt0) { <br>
+				6. &nbsp&nbsp&nbsp&nbsp 
+				<font color="#ff0000">load one bm*bk/2 block of A into smA[bk/2...bk-1][bm]</font> <br>
+				7. &nbsp&nbsp&nbsp&nbsp 
+				<font color="#ff0000">load one bk/2*bn block of B into smB[bk/2...bk-1][bm]</font> <br>
+				8.&nbsp&nbsp&nbsp&nbsp 
+				<b>for</b> (ki=0;ki&lt<font color="#ff0000">bk/2</font>;ki++) { <br>
+				9. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  
+				load one column of A in smA<font color="#ff0000">[0...bk/2-1][bm]</font> into rA[0...rx] <br>
+				10. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				load one row of B in smB<font color="#ff0000">[0...bk/2-1][bn]</font> into rB[0...ry] <br>
+				11.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+				accum[0...rx][0...ry]+=rA[0...rx]*rB[0...ry] <br>
+				12.&nbsp&nbsp&nbsp&nbsp
+				} //end for <br>
+				13.&nbsp&nbsp&nbsp&nbsp
+				<b>synch</b> <br>
+				14.&nbsp&nbsp&nbsp&nbsp
+				<font color="#ff0000">load one bm*bk/2 block of A into smA[0...bk/2-1][bm]</font> <br>
+				15.&nbsp&nbsp&nbsp&nbsp
+				<font color="#ff0000">load one bk/2*bn  block of B into smB[0...bk/2-1][bn]</font> <br>
+				16.&nbsp&nbsp&nbsp&nbsp
+				<b>for</b> (ki=<font color="#ff0000">bk/2-1</font>;ki&lt<font color="#ff0000">bk</font>;ki++) { <br>
+				17. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				load one column of A in smA<font color="#ff0000">[bk/2...bk-1][bm]</font> into rA[0...rx] <br>
+				18. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				load one row of B in smB<font color="#ff0000">[bk/2...bk-1][bn]</font> into rB[0...ry] <br>
+				19. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				accum[0...rx][0...ry]+=rA[0...rx]*rB[0...ry] <br>
+				20.&nbsp&nbsp&nbsp&nbsp
+				} //end for <br>
+				21.&nbsp&nbsp&nbsp&nbsp
+				<b><font color="#ff0000">synch</font></b> <br>
+				22.} //end while <br>
+				23.Merge accum[0...rx][0...ry] with bm*bn block of C.  <br>
+			</td></table>
+			 <b>Algorithm 3.</b> The algorithm with double-buffering strategy.<br>
+			&nbsp&nbsp&nbsp&nbsp
+			The Algorithm 3 with CUDA C only achieves an efficiency of 55%, 
+			which is also far away from the theoretical efficiency of 78%.<br>
+			<img border="0" src="./nv_images/fig3.jpg" width="600" height="400"><br>
+			<b>Figure 3.</b> The performance comparison of Algorithm 2 and 3.<br><br>
+		</div>
+	<li><h3><b> Instruction scheduling </b></h3>
+		<div style="LINE-HEIGHT:25px">
+			&nbsp&nbsp&nbsp&nbsp
+			The use of 128-bits memory operations has longer latency. Besides, in order to make sure that 
+			data for the next block is totally loaded into shared memory before computation, the double-buffering 
+			forces us to use one more synchronization instruction in the while-loop. Since the major penalty is 
+			extra latency, we therefore believe that there exists room for optimizing instruction scheduling to 
+			hide these latencies.<br>
+			&nbsp&nbsp&nbsp&nbsp
+			You can find more detail about the rearrange process on instruction sequence in our paper.<br>
+			<img border="0" src="./nv_images/fig4.jpg" width="600" height="400"><br>
+			<b>Figure 4.</b> The performance of our final version of DGEMM.<br>
+		</div>
+</ul>
+
+<hr>
+<h2><b>Results</b></h2>
+<ul>
+<div style="LINE-HEIGHT:25px">
+	&nbsp&nbsp&nbsp&nbsp
+	In the experimental evaluation, there are four versions written in assemble code:<br>
+	<li><i>version 1</i>: Based on Algorithm 3, we modify it to only use 128-bits memory operations and do not 
+		implement double-buffering. The implementation eliminates one synchronization instruction in while-loop. <br>
+	<li><i>version 2</i>: Algorithm 3 is directly translated into assemble code without any instruction scheduling 
+		optimization. <br>
+	<li><i>version 3</i>: Based on version 2, the instructions in all inner for-loops are reordered by instruction 
+		scheduling optimization. That is, we only optimized latency hiding for shared memory accesses. <br>
+	<li><i>version 4</i>: Based on version 3, we further optimized the latency hiding for global memory access using 
+		instruction scheduling optimization. This is our final version.<br>
+	<img border="0" src="./nv_images/fig5.jpg" width="600" height="440"><br>
+	<b>Figure 5.</b> The incremental improvement by the optimization strategies. <br>
+	They are also compared to CUBLAS3.2.<br>
+</div>
+</ul>
+
+<hr>
+<h2><b>Source code</b></h2>
+<ul>
+<li><a href="./dgemm_nv.tar.gz"><h3>dgemm_nv.tar.gz</h3></a>
+</ul>
+
+<hr>
+<h2><b>Paper</b></h2>
+<ul>
+<li><a href="./dgemm_nv.pdf"><h3>Fast Implementation of DGEMM on Fermi GPU</h3></a>
+</ul>
+
+<hr>
+<h2><b>Microbenchmark</b></h2>
+<ul>
+	<li><h3><b>Test description</b></h3>
+		<table border cellpadding=5>
+			<tr><th rowspan=2>C-bench</th>
+				<th>inst-bench</th>
+				<td>measure latency and throughput of arithmetic pipeline</td>
+			</tr>
+			<tr>
+				<th>gmem-bench</th>
+				<td>evalue effective global memory bandwidth in different access patterns</td>
+			</tr>
+			<tr><th rowspan=3>sass-bench</th>
+				<th>inst_latency</th>
+				<td>get accurate latency time of relevant instructions</td>
+			</tr>
+			<tr>
+				<th>smem_latency</th>
+				<td>get accurate latency time of shared memory load in different width</td>
+			</tr>	
+			<tr>
+				<th>dual_issue_test</th>
+				<td>verify the dual issue mechanism in float operation</td>
+			</tr>									
+		</table><br>
+	<li><h3><b>Source code</b></h3>
+		<a href="./microbenchmarks.tar.gz"><h3>Microbenchmarks for Fermi GPU<h3></a>
+</ul>
+<hr>
+
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+   <title> High Performance DGEMM on GPU </title>
+</head>
+<body>
+<font face=Cambria>
+
+    <h1 align=center><b>High Performance DGEMM on GPU (NVIDIA/ATI)</b></h1>
+<h2><b>Abstract</b></h2>
+Dense matrix operations are important problems in scientific and engineering computing applications. 
+There have been a lot of works on developing high performance libraries for dense matrix operations.
+Basic Linear Algebra Subprograms (BLAS) is a de facto application programming interface standard for publishing libraries to perform basic linear algebra operations such as vector and matrix multiplication.
+The first BLAS is released as a building block of LAPACK, which is a performance portable library for implementing dense linear algebra.
+Hardware vendors (Intel, AMD, IBM, etc.) also provide BLAS librariesy tuned on their own processors, i.e. MKL and ACML. 
+It is well-known that the performance of BLAS depends on the underlying hardware.
+<br>Recently, multi/many-core CPU technology has been become mainstream since it shows advantage for avoiding power wall and instruction level parallelism wall.
+As a hardware accelerator, the GPU has outpaced the standard CPU in performance and has been extensively used in general-purpose computing applications including numerical computation. 
+Since dense matrix operations are compute intensive and exhibit regular memory access patterns, they are well suited for the GPU. 
+To develop BLAS performance on GPU, NVIDIA released CUBLAS included in CUDA Toolkit, and AMD released ACML-GPU library.
+Besides, we also observed that CUBLAS3.2 is much better than CUBLAS3.0, which was released in early of 2010. 
+CUBLAS3.2 improved performance of double-precision matrix multiplication (DGEMM) by 100%, which is an important kernel in High Performance Computing.
+<multicol cols=2>
+<li>So, what are the technical details behind the performance improvement?
+<li>What's the performance efficiency achieved by now? Is there any more room for a further performance improvement?
+</multicol>
+Besides, the scale of applications is becoming larger and larger, so will the matrices used in DGEMM. 
+When the matrix scale is too large to put into GPU memory, there will be data transfer between CPU memory and GPU memory. 
+The data transfer will lower down the DGEMM performance.
+<multicol cols=2>
+<li>What's the bottleneck of large scale DGEMM?
+<li>What can we do to alleviate data transfer, and make use of GPU more efficiently?
+</multicol>
+In the project, we focus on solving these problems on both NVIDIA and ATI platforms. 
+<br> The details are in the links below.
+
+<hr>
+<h2><b>Projects</b></h2>
+<table border="0">
+<td width=250>
+<ul>
+<li><address><a href="./dgemm_nv.html"><h3><b>DGEMM on NVIDIA</b></h3></a></address>
+<li><address><a href="./dgemm_ati.html"><h3><b>DGEMM on ATI</b></h3></a></address>
+</ul>
+</td>
+</table>
+<hr>
+<table border="0" width="100%">
+  <tr>
+    <td width="25%">
+      <p align="left"><img border="0" src="../../tgm/me09.jpg" width="175" height="234">
+    <h3><b>Guangming Tan</b></h3>
+    <dl>
+      <dt>Associate Processor</dt>
+	<dt> Institute of Computing Technology</dt>
+	<dt> Chinese Academy of Sciences</dt>
+      <dt>Kexueyuan South Road, Beijing, China,100190</dt>    
+    <dt><i>E-mail: <a href="mailto:lijiajia@ict.ac.cn">tgm@ict.ac.cn</a></i></dt>   
+</dl><p>　
+	</td>
+
+    <td width="25%">
+      <p align="left"><img border="0" src="../../ljj/ljj.jpg" width="175" height="234">
+    <h3><b>Jiajia Li</b></h3>
+    <dl>
+      <dt>PhD candidate</dt>
+	<dt> Institute of Computing Technology</dt>
+	<dt> Chinese Academy of Sciences</dt>
+      <dt>Kexueyuan South Road, Beijing, China,100190</dt>    
+    <dt><i>E-mail: <a href="mailto:lijiajia@ict.ac.cn">lijiajia@ict.ac.cn</a></i></dt>   
+</dl><p>　
+	</td>
+
+    <td width="25%">
+      <p align="left"><img border="0" src="lxj.jpg" width="175" height="234">
+    <h3><b>Xingjian Li</b></h3>
+    <dl>
+      <dt>Master Candidate</dt>
+	<dt> Institute of Computing Technology</dt>
+	<dt> Chinese Academy of Sciences</dt>
+      <dt>Kexueyuan South Road, Beijing, China,100190</dt>    
+    <dt><i>E-mail: <a href="mailto:lijiajia@ict.ac.cn">lixj04@gmail.com</a></i></dt>   
+</dl><p>　
+	</td>
+
+    <td width="25%">
+      <p align="left"><img border="0" src="./nv_images/llc.jpg" width="175" height="234">
+    <h3><b>Linchuan Li</b></h3>
+    <dl>
+      <dt>Master candidate</dt>
+	<dt> Institute of Computing Technology</dt>
+	<dt> Chinese Academy of Sciences</dt>
+      <dt>Kexueyuan South Road, Beijing, China,100190</dt>    
+    <dt><i>E-mail: <a href="mailto:lijiajia@ict.ac.cn">lilinchuan@ncic.ac.cn</a></i></dt>   
+</dl><p>　
+	</td>
+
+  </tr>
+</table>
+
+</font>
+</body>
+</html>
+
+
+
