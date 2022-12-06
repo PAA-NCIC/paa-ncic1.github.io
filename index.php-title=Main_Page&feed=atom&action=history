@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="http://www.ncic.ac.cn/~tgm/skins/common/feed.css?303"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;feed=atom&amp;action=history</id>
+		<title>Main Page - Revision history</title>
+		<link rel="self" type="application/atom+xml" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;feed=atom&amp;action=history"/>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;action=history"/>
+		<updated>2021-05-06T07:49:18Z</updated>
+		<subtitle>Revision history for this page on the wiki</subtitle>
+		<generator>MediaWiki 1.19.16</generator>
+
+	<entry>
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=84&amp;oldid=prev</id>
+		<title>Tgm: /* Publication (Selected) */</title>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=84&amp;oldid=prev"/>
+				<updated>2020-03-29T04:07:40Z</updated>
+		
+		<summary type="html">&lt;p&gt;‎&lt;span dir=&quot;auto&quot;&gt;&lt;span class=&quot;autocomment&quot;&gt;Publication (Selected)&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;table class='diff diff-contentalign-left'&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+			&lt;tr valign='top'&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;← Older revision&lt;/td&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;Revision as of 04:07, 29 March 2020&lt;/td&gt;
+			&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 20:&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 20:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;==Publication (Selected)==&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;==Publication (Selected)==&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Zhen Xie , Guangming Tan , Weifeng Liu , Ninghui Sun. IA- SpGEMM: An Input-aware Auto-tuning Framework for Parallel Sparse Matrix-Matrix Multiplication. In Proceedings of 2019 International Conference on Supercomputing, Phoenix, AZ, USA, June 26–28, 2019 (ICS ’19)&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Zhen Xie , Guangming Tan , Weifeng Liu , Ninghui Sun. IA- SpGEMM: An Input-aware Auto-tuning Framework for Parallel Sparse Matrix-Matrix Multiplication. In Proceedings of 2019 International Conference on Supercomputing, Phoenix, AZ, USA, June 26–28, 2019 (ICS ’19) &lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;[http://www.ncic.ac.cn/~tgm/images/b/b3/IA-SpGEMM_an_input-aware_auto-tuning_framework_for_parallel_sparse_matrix-matrix_multiplication.pdf PDF]&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Ke Meng, Jiajia Li, Guangming Tan, Ninghui Sun, A Pattern Based Algorithmic Autotuner for Graph Processing on GPUs, ACM Principles and Practice of Parallel Programming&amp;#160; (PPoPP) 2019.&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Ke Meng, Jiajia Li, Guangming Tan, Ninghui Sun, A Pattern Based Algorithmic Autotuner for Graph Processing on GPUs, ACM Principles and Practice of Parallel Programming&amp;#160; (PPoPP) 2019. &lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;[http://www.ncic.ac.cn/~tgm/images/3/3a/A_Pattern_Based_Algorithmic_Autotuner_for_Graph.pdf PDF]&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Junmin Xiao, Shijie Wang, Weiqiang Wan, Xuehai Hong, Guangming Tan. Co-designing for Scalable Ensemble Kalman Filter. ACM Principles and Practice of Parallel Programming (PPoPP). 2019&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Junmin Xiao, Shijie Wang, Weiqiang Wan, Xuehai Hong, Guangming Tan. Co-designing for Scalable Ensemble Kalman Filter. ACM Principles and Practice of Parallel Programming (PPoPP). 2019 &lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;[http://www.ncic.ac.cn/~tgm/images/6/61/S-EnKF_Co-designing_for_Scalable_Ensemble_Kalman.pdf PDF]&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Guangming Tan, Junhong Liu, Jiajia Li, Design and Implementation of Adaptive SpMV Library for Multicore and Many-Core Architecture. ACM Trans. Math. Softw. 44(4): 46:1-46:25 (2018)&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Guangming Tan, Junhong Liu, Jiajia Li, Design and Implementation of Adaptive SpMV Library for Multicore and Many-Core Architecture. ACM Trans. Math. Softw. 44(4): 46:1-46:25 (2018)&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Keren Zhou, Guangming Tan, Wei Zhou, Quadboost: A Scalable Concurrent Quadtree. IEEE Trans. Parallel Distrib. Syst. 29(3): 673-686 (2018)&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Keren Zhou, Guangming Tan, Wei Zhou, Quadboost: A Scalable Concurrent Quadtree. IEEE Trans. Parallel Distrib. Syst. 29(3): 673-686 (2018)&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</summary>
+		<author><name>Tgm</name></author>	</entry>
+
+	<entry>
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=81&amp;oldid=prev</id>
+		<title>Tgm: /* Publication (Selected) */</title>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=81&amp;oldid=prev"/>
+				<updated>2020-03-29T04:03:15Z</updated>
+		
+		<summary type="html">&lt;p&gt;‎&lt;span dir=&quot;auto&quot;&gt;&lt;span class=&quot;autocomment&quot;&gt;Publication (Selected)&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;table class='diff diff-contentalign-left'&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+			&lt;tr valign='top'&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;← Older revision&lt;/td&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;Revision as of 04:03, 29 March 2020&lt;/td&gt;
+			&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 40:&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 40:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Jie Yan, Guangming Tan, Ninghui Sun, Exploiting fine-grained parallelism in graph traversal algorithms via lock virtualization on multi-core architecture. The Journal of Supercomputing 69(3): 1462-1490 (2014).&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Jie Yan, Guangming Tan, Ninghui Sun, Exploiting fine-grained parallelism in graph traversal algorithms via lock virtualization on multi-core architecture. The Journal of Supercomputing 69(3): 1462-1490 (2014).&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;# Yulong Luo, Guangming Tan, Optimizing stencil code via locality of computation. International Conference on Parallel Architectures and Compilation (PACT) 2014: 477-478.&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;# Yulong Luo, Guangming Tan, Optimizing stencil code via locality of computation. International Conference on Parallel Architectures and Compilation (PACT) 2014: 477-478.&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;# Jiajia Li, Guangming Tan, Mingyu Chen, Ninghui Sun,SMAT: An Input Adaptive Auto-Tuner for Sparse Matrix-Vector Multiplication, the 34th annual ACM SIGPLAN conference on Programming Language Design and Implementation (PLDI), 117-126, 2013&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;# Jiajia Li, Guangming Tan, Mingyu Chen, Ninghui Sun,SMAT: An Input Adaptive Auto-Tuner for Sparse Matrix-Vector Multiplication, the 34th annual ACM SIGPLAN conference on Programming Language Design and Implementation (PLDI), 117-126, 2013 &lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;[http://www.ncic.ac.cn/~tgm/images/pldi13.pdf PDF]&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;# Jie Yan, Guangming Tan, Xiuxia Zhang, Erlin Yao, Ninghui Sun, Vlock: Lock virtualization mechanism for exploiting fine-grained parallelism in graph traversal algorithms, 2013 IEEE/ACM International Symposium on Code Generation and Optimization(CGO),pp.1-10,2013&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;# Jie Yan, Guangming Tan, Xiuxia Zhang, Erlin Yao, Ninghui Sun, Vlock: Lock virtualization mechanism for exploiting fine-grained parallelism in graph traversal algorithms, 2013 IEEE/ACM International Symposium on Code Generation and Optimization(CGO),pp.1-10,2013&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;# Huiwei Lv, Guangming Tan, Mingyu Chen, Ninghui Sun: Understanding parallelism in graph traversal on multi-core clusters. Computer Science - R&amp;amp;D 28(2-3): 193-201 (2013)&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;# Huiwei Lv, Guangming Tan, Mingyu Chen, Ninghui Sun: Understanding parallelism in graph traversal on multi-core clusters. Computer Science - R&amp;amp;D 28(2-3): 193-201 (2013)&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</summary>
+		<author><name>Tgm</name></author>	</entry>
+
+	<entry>
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=79&amp;oldid=prev</id>
+		<title>Tgm: /* Publication (Selected) */</title>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=79&amp;oldid=prev"/>
+				<updated>2020-03-29T03:59:22Z</updated>
+		
+		<summary type="html">&lt;p&gt;‎&lt;span dir=&quot;auto&quot;&gt;&lt;span class=&quot;autocomment&quot;&gt;Publication (Selected)&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;table class='diff diff-contentalign-left'&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+			&lt;tr valign='top'&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;← Older revision&lt;/td&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;Revision as of 03:59, 29 March 2020&lt;/td&gt;
+			&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 20:&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 20:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;==Publication (Selected)==&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;==Publication (Selected)==&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;#160;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;&lt;ins style=&quot;color: red; font-weight: bold; text-decoration: none;&quot;&gt;#Zhen Xie , Guangming Tan , Weifeng Liu , Ninghui Sun. IA- SpGEMM: An Input-aware Auto-tuning Framework for Parallel Sparse Matrix-Matrix Multiplication. In Proceedings of 2019 International Conference on Supercomputing, Phoenix, AZ, USA, June 26–28, 2019 (ICS ’19)&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Ke Meng, Jiajia Li, Guangming Tan, Ninghui Sun, A Pattern Based Algorithmic Autotuner for Graph Processing on GPUs, ACM Principles and Practice of Parallel Programming&amp;#160; (PPoPP) 2019.&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Ke Meng, Jiajia Li, Guangming Tan, Ninghui Sun, A Pattern Based Algorithmic Autotuner for Graph Processing on GPUs, ACM Principles and Practice of Parallel Programming&amp;#160; (PPoPP) 2019.&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Junmin Xiao, Shijie Wang, Weiqiang Wan, Xuehai Hong, Guangming Tan. Co-designing for Scalable Ensemble Kalman Filter. ACM Principles and Practice of Parallel Programming (PPoPP). 2019&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Junmin Xiao, Shijie Wang, Weiqiang Wan, Xuehai Hong, Guangming Tan. Co-designing for Scalable Ensemble Kalman Filter. ACM Principles and Practice of Parallel Programming (PPoPP). 2019&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</summary>
+		<author><name>Tgm</name></author>	</entry>
+
+	<entry>
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=78&amp;oldid=prev</id>
+		<title>Tgm: /* Publication (Selected) */</title>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=78&amp;oldid=prev"/>
+				<updated>2019-01-04T12:10:48Z</updated>
+		
+		<summary type="html">&lt;p&gt;‎&lt;span dir=&quot;auto&quot;&gt;&lt;span class=&quot;autocomment&quot;&gt;Publication (Selected)&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;table class='diff diff-contentalign-left'&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+			&lt;tr valign='top'&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;← Older revision&lt;/td&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;Revision as of 12:10, 4 January 2019&lt;/td&gt;
+			&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 21:&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 21:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;==Publication (Selected)==&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;==Publication (Selected)==&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Ke Meng, Jiajia Li, Guangming Tan, Ninghui Sun, A Pattern Based Algorithmic Autotuner for Graph Processing on GPUs, ACM Principles and Practice of Parallel Programming&amp;#160; (PPoPP) 2019.&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Ke Meng, Jiajia Li, Guangming Tan, Ninghui Sun, A Pattern Based Algorithmic Autotuner for Graph Processing on GPUs, ACM Principles and Practice of Parallel Programming&amp;#160; (PPoPP) 2019.&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Junmin Xiao, Shijie Wang, Weiqiang Wan, &lt;del class=&quot;diffchange diffchange-inline&quot;&gt;and &lt;/del&gt;Guangming Tan. Co-designing for Scalable Ensemble Kalman Filter. ACM Principles and Practice of Parallel Programming (PPoPP). 2019&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Junmin Xiao, Shijie Wang, Weiqiang Wan, &lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;Xuehai Hong, &lt;/ins&gt;Guangming Tan. Co-designing for Scalable Ensemble Kalman Filter. ACM Principles and Practice of Parallel Programming (PPoPP). 2019&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Guangming Tan, Junhong Liu, Jiajia Li, Design and Implementation of Adaptive SpMV Library for Multicore and Many-Core Architecture. ACM Trans. Math. Softw. 44(4): 46:1-46:25 (2018)&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Guangming Tan, Junhong Liu, Jiajia Li, Design and Implementation of Adaptive SpMV Library for Multicore and Many-Core Architecture. ACM Trans. Math. Softw. 44(4): 46:1-46:25 (2018)&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Keren Zhou, Guangming Tan, Wei Zhou, Quadboost: A Scalable Concurrent Quadtree. IEEE Trans. Parallel Distrib. Syst. 29(3): 673-686 (2018)&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Keren Zhou, Guangming Tan, Wei Zhou, Quadboost: A Scalable Concurrent Quadtree. IEEE Trans. Parallel Distrib. Syst. 29(3): 673-686 (2018)&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</summary>
+		<author><name>Tgm</name></author>	</entry>
+
+	<entry>
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=77&amp;oldid=prev</id>
+		<title>Tgm: /* Research */</title>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=77&amp;oldid=prev"/>
+				<updated>2019-01-04T12:04:41Z</updated>
+		
+		<summary type="html">&lt;p&gt;‎&lt;span dir=&quot;auto&quot;&gt;&lt;span class=&quot;autocomment&quot;&gt;Research&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;table class='diff diff-contentalign-left'&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+			&lt;tr valign='top'&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;← Older revision&lt;/td&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;Revision as of 12:04, 4 January 2019&lt;/td&gt;
+			&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 7:&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 7:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Programming &amp;#160;&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Programming &amp;#160;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Autotuning| Exascale Autotuning]] [[http://www.ncic.ac.cn/~tgm/images/pldi13.pdf PLDI'13] ICS'15]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Autotuning| Exascale Autotuning]] [[http://www.ncic.ac.cn/~tgm/images/pldi13.pdf PLDI'13] ICS'15]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Graph| Graph-Parallel Programming]] [[http://www.ncic.ac.cn/~tgm/images/e/ea/P279-tan.pdf PPoPP'08]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/CGO13.pdf CGO'13] TPDS'15]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Graph| Graph-Parallel Programming]] [[http://www.ncic.ac.cn/~tgm/images/e/ea/P279-tan.pdf PPoPP'08]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/CGO13.pdf CGO'13] TPDS'15 &lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;PPoPP'19&lt;/ins&gt;]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Algorithm&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Algorithm&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[DGEMM | DGEMM+Deep Learning on GPU]] [PPoPP'17&amp;#160; ICS'17 [http://www.ncic.ac.cn/~tgm/images/1/18/SC11.pdf SC'11] [http://www.ncic.ac.cn/~tgm/images/e/e9/ICS12.pdf ICS'12]]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[DGEMM | DGEMM+Deep Learning on GPU]] [PPoPP'17&amp;#160; ICS'17 [http://www.ncic.ac.cn/~tgm/images/1/18/SC11.pdf SC'11] [http://www.ncic.ac.cn/~tgm/images/e/e9/ICS12.pdf ICS'12]]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</summary>
+		<author><name>Tgm</name></author>	</entry>
+
+	<entry>
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=76&amp;oldid=prev</id>
+		<title>Tgm: /* Publication (Selected) */</title>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=76&amp;oldid=prev"/>
+				<updated>2019-01-04T12:01:57Z</updated>
+		
+		<summary type="html">&lt;p&gt;‎&lt;span dir=&quot;auto&quot;&gt;&lt;span class=&quot;autocomment&quot;&gt;Publication (Selected)&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;table class='diff diff-contentalign-left'&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+			&lt;tr valign='top'&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;← Older revision&lt;/td&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;Revision as of 12:01, 4 January 2019&lt;/td&gt;
+			&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 20:&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 20:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;==Publication (Selected)==&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;==Publication (Selected)==&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Keren Zhou, Guangming Tan, Xiuxia Zhang, Chaowei Wang, Ninghui Sun, A Performance Analysis Framework for Exploiting GPU Microarchitectural Capability. ACM &lt;del class=&quot;diffchange diffchange-inline&quot;&gt;ICS &lt;/del&gt;2017.&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;#Ke Meng, Jiajia Li, Guangming Tan, Ninghui Sun, A Pattern Based Algorithmic Autotuner for Graph Processing on GPUs, ACM Principles and Practice of Parallel Programming&amp;#160; (PPoPP) 2019.&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Xiuxia Zhang, Guangming Tan, Shuangbai Xue, Jiajia Li, Keren Zhou, Mingyu Chen, Understanding the GPU Microarchitecture to Achieve Bare-Metal Performance Tuning. ACM &lt;del class=&quot;diffchange diffchange-inline&quot;&gt;PPOPP &lt;/del&gt;2017: 31-43&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;#Junmin Xiao, Shijie Wang, Weiqiang Wan, and Guangming Tan. Co-designing for Scalable Ensemble Kalman Filter. ACM Principles and Practice of Parallel Programming (PPoPP). 2019&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;#160;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;#Guangming Tan, Junhong Liu, Jiajia Li, Design and Implementation of Adaptive SpMV Library for Multicore and Many-Core Architecture. ACM Trans. Math. Softw. 44(4): 46:1-46:25 (2018)&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;#160;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;#Keren Zhou, Guangming Tan, Wei Zhou, Quadboost: A Scalable Concurrent Quadtree. IEEE Trans. Parallel Distrib. Syst. 29(3): 673-686 (2018)&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;#160;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;#Yuanrong Wang, Xueqi Li, Dawei Zang, Guangming Tan, Ninghui Sun, Accelerating FM-index Search for Genomic Data Processing. the 47th International Conference on Parallel Processing (ICPP) 2018: 65:1-65:12&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;#160;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;#Xueqi Li, Guangming Tan, Bingchen Wang, Ninghui Sun, High-performance genomic analysis framework with in-memory computing.&amp;#160; the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP) 2018: 317-328&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;#160;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;#Junhong Liu, Xin He, Weifeng Liu, Guangming Tan, Register-based implementation of the sparse general matrix-matrix multiplication on GPUs. the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP) 2018: 407-408&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;#160;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;#Ke Meng, Guangming Tan, RING: NUMA-Aware Message-Batching Runtime for Data-Intensive Applications. 23rd IEEE International Conference on Parallel and Distributed Systems (ICPADS) 2017: 368-375&lt;/ins&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;#160;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Keren Zhou, Guangming Tan, Xiuxia Zhang, Chaowei Wang, Ninghui Sun, A Performance Analysis Framework for Exploiting GPU Microarchitectural Capability. ACM &lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;International Conference on Supercomputing, &lt;/ins&gt;2017.&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;#160;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Xiuxia Zhang, Guangming Tan, Shuangbai Xue, Jiajia Li, Keren Zhou, Mingyu Chen, Understanding the GPU Microarchitecture to Achieve Bare-Metal Performance Tuning. &lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;the 22nd &lt;/ins&gt;ACM &lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP), &lt;/ins&gt;2017: 31-43&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Guangming Tan, Chunming Zhang, Wen Tang, Peiheng Zhang, Ninghui Sun, Accelerating Irregular Computation in Massive Short Reads Mapping on FPGA Co-processor, IEEE Transactions on Parallel and Distributed Systems,Vol.27, No.5, 2016.&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Guangming Tan, Chunming Zhang, Wen Tang, Peiheng Zhang, Ninghui Sun, Accelerating Irregular Computation in Massive Short Reads Mapping on FPGA Co-processor, IEEE Transactions on Parallel and Distributed Systems,Vol.27, No.5, 2016.&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Jie Yan, Guangming Tan, Zeyao Mo, Ninghui Sun, Graphine: Programming Graph-Parallel Computation of Large Natural Graphs on Multicore Cluster, IEEE Transactions on Parallel and Distributed Systems, Vol.27, No.6, 2016. &amp;#160;&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;#Jie Yan, Guangming Tan, Zeyao Mo, Ninghui Sun, Graphine: Programming Graph-Parallel Computation of Large Natural Graphs on Multicore Cluster, IEEE Transactions on Parallel and Distributed Systems, Vol.27, No.6, 2016. &amp;#160;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</summary>
+		<author><name>Tgm</name></author>	</entry>
+
+	<entry>
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=75&amp;oldid=prev</id>
+		<title>Tgm: /* Research */</title>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=75&amp;oldid=prev"/>
+				<updated>2017-06-19T12:47:43Z</updated>
+		
+		<summary type="html">&lt;p&gt;‎&lt;span dir=&quot;auto&quot;&gt;&lt;span class=&quot;autocomment&quot;&gt;Research&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;table class='diff diff-contentalign-left'&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+			&lt;tr valign='top'&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;← Older revision&lt;/td&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;Revision as of 12:47, 19 June 2017&lt;/td&gt;
+			&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 9:&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 9:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Graph| Graph-Parallel Programming]] [[http://www.ncic.ac.cn/~tgm/images/e/ea/P279-tan.pdf PPoPP'08]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/CGO13.pdf CGO'13] TPDS'15]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Graph| Graph-Parallel Programming]] [[http://www.ncic.ac.cn/~tgm/images/e/ea/P279-tan.pdf PPoPP'08]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/CGO13.pdf CGO'13] TPDS'15]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Algorithm&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Algorithm&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[DGEMM | DGEMM+Deep &lt;del class=&quot;diffchange diffchange-inline&quot;&gt;Learnin &lt;/del&gt;on GPU]] [PPoPP'17&amp;#160; ICS'17 [http://www.ncic.ac.cn/~tgm/images/1/18/SC11.pdf SC'11] [http://www.ncic.ac.cn/~tgm/images/e/e9/ICS12.pdf ICS'12]]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[DGEMM | DGEMM+Deep &lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;Learning &lt;/ins&gt;on GPU]] [PPoPP'17&amp;#160; ICS'17 [http://www.ncic.ac.cn/~tgm/images/1/18/SC11.pdf SC'11] [http://www.ncic.ac.cn/~tgm/images/e/e9/ICS12.pdf ICS'12]]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Dynamic Programming on Multicore]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/SC06.pdf SC'06] [http://www.ncic.ac.cn/~tgm/images/3/3d/SPAA07.pdf SPAA'07] [http://www.ncic.ac.cn/~tgm/images/TPDS09.pdf TPDS'09]]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Dynamic Programming on Multicore]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/SC06.pdf SC'06] [http://www.ncic.ac.cn/~tgm/images/3/3d/SPAA07.pdf SPAA'07] [http://www.ncic.ac.cn/~tgm/images/TPDS09.pdf TPDS'09]]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Architecture&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Architecture&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</summary>
+		<author><name>Tgm</name></author>	</entry>
+
+	<entry>
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=74&amp;oldid=prev</id>
+		<title>Tgm: /* Research */</title>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=74&amp;oldid=prev"/>
+				<updated>2017-06-19T12:47:33Z</updated>
+		
+		<summary type="html">&lt;p&gt;‎&lt;span dir=&quot;auto&quot;&gt;&lt;span class=&quot;autocomment&quot;&gt;Research&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;table class='diff diff-contentalign-left'&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+			&lt;tr valign='top'&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;← Older revision&lt;/td&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;Revision as of 12:47, 19 June 2017&lt;/td&gt;
+			&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 9:&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 9:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Graph| Graph-Parallel Programming]] [[http://www.ncic.ac.cn/~tgm/images/e/ea/P279-tan.pdf PPoPP'08]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/CGO13.pdf CGO'13] TPDS'15]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Graph| Graph-Parallel Programming]] [[http://www.ncic.ac.cn/~tgm/images/e/ea/P279-tan.pdf PPoPP'08]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/CGO13.pdf CGO'13] TPDS'15]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Algorithm&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Algorithm&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[DGEMM&lt;del class=&quot;diffchange diffchange-inline&quot;&gt;+Deep Learning&lt;/del&gt;| DGEMM on GPU]] [PPoPP'17&amp;#160; ICS'17 [http://www.ncic.ac.cn/~tgm/images/1/18/SC11.pdf SC'11] [http://www.ncic.ac.cn/~tgm/images/e/e9/ICS12.pdf ICS'12]]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[DGEMM | DGEMM&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;+Deep Learnin &lt;/ins&gt;on GPU]] [PPoPP'17&amp;#160; ICS'17 [http://www.ncic.ac.cn/~tgm/images/1/18/SC11.pdf SC'11] [http://www.ncic.ac.cn/~tgm/images/e/e9/ICS12.pdf ICS'12]]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Dynamic Programming on Multicore]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/SC06.pdf SC'06] [http://www.ncic.ac.cn/~tgm/images/3/3d/SPAA07.pdf SPAA'07] [http://www.ncic.ac.cn/~tgm/images/TPDS09.pdf TPDS'09]]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Dynamic Programming on Multicore]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/SC06.pdf SC'06] [http://www.ncic.ac.cn/~tgm/images/3/3d/SPAA07.pdf SPAA'07] [http://www.ncic.ac.cn/~tgm/images/TPDS09.pdf TPDS'09]]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Architecture&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Architecture&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</summary>
+		<author><name>Tgm</name></author>	</entry>
+
+	<entry>
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=73&amp;oldid=prev</id>
+		<title>Tgm: /* Research */</title>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=73&amp;oldid=prev"/>
+				<updated>2017-06-19T12:47:04Z</updated>
+		
+		<summary type="html">&lt;p&gt;‎&lt;span dir=&quot;auto&quot;&gt;&lt;span class=&quot;autocomment&quot;&gt;Research&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;table class='diff diff-contentalign-left'&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+			&lt;tr valign='top'&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;← Older revision&lt;/td&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;Revision as of 12:47, 19 June 2017&lt;/td&gt;
+			&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 9:&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 9:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Graph| Graph-Parallel Programming]] [[http://www.ncic.ac.cn/~tgm/images/e/ea/P279-tan.pdf PPoPP'08]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/CGO13.pdf CGO'13] TPDS'15]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Graph| Graph-Parallel Programming]] [[http://www.ncic.ac.cn/~tgm/images/e/ea/P279-tan.pdf PPoPP'08]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/CGO13.pdf CGO'13] TPDS'15]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Algorithm&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Algorithm&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[DGEMM&lt;del class=&quot;diffchange diffchange-inline&quot;&gt;/&lt;/del&gt;Deep Learning| DGEMM on GPU]] [PPoPP'17&amp;#160; ICS'17 [http://www.ncic.ac.cn/~tgm/images/1/18/SC11.pdf SC'11] [http://www.ncic.ac.cn/~tgm/images/e/e9/ICS12.pdf ICS'12]]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[DGEMM&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;+&lt;/ins&gt;Deep Learning| DGEMM on GPU]] [PPoPP'17&amp;#160; ICS'17 [http://www.ncic.ac.cn/~tgm/images/1/18/SC11.pdf SC'11] [http://www.ncic.ac.cn/~tgm/images/e/e9/ICS12.pdf ICS'12]]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Dynamic Programming on Multicore]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/SC06.pdf SC'06] [http://www.ncic.ac.cn/~tgm/images/3/3d/SPAA07.pdf SPAA'07] [http://www.ncic.ac.cn/~tgm/images/TPDS09.pdf TPDS'09]]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Dynamic Programming on Multicore]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/SC06.pdf SC'06] [http://www.ncic.ac.cn/~tgm/images/3/3d/SPAA07.pdf SPAA'07] [http://www.ncic.ac.cn/~tgm/images/TPDS09.pdf TPDS'09]]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Architecture&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Architecture&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</summary>
+		<author><name>Tgm</name></author>	</entry>
+
+	<entry>
+		<id>http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=72&amp;oldid=prev</id>
+		<title>Tgm: /* Research */</title>
+		<link rel="alternate" type="text/html" href="http://www.ncic.ac.cn/~tgm/index.php?title=Main_Page&amp;diff=72&amp;oldid=prev"/>
+				<updated>2017-06-19T12:46:38Z</updated>
+		
+		<summary type="html">&lt;p&gt;‎&lt;span dir=&quot;auto&quot;&gt;&lt;span class=&quot;autocomment&quot;&gt;Research&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;table class='diff diff-contentalign-left'&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+				&lt;col class='diff-marker' /&gt;
+				&lt;col class='diff-content' /&gt;
+			&lt;tr valign='top'&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;← Older revision&lt;/td&gt;
+			&lt;td colspan='2' style=&quot;background-color: white; color:black;&quot;&gt;Revision as of 12:46, 19 June 2017&lt;/td&gt;
+			&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 9:&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;diff-lineno&quot;&gt;Line 9:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Graph| Graph-Parallel Programming]] [[http://www.ncic.ac.cn/~tgm/images/e/ea/P279-tan.pdf PPoPP'08]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/CGO13.pdf CGO'13] TPDS'15]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Graph| Graph-Parallel Programming]] [[http://www.ncic.ac.cn/~tgm/images/e/ea/P279-tan.pdf PPoPP'08]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/CGO13.pdf CGO'13] TPDS'15]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Algorithm&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Algorithm&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;−&lt;/td&gt;&lt;td style=&quot;background: #ffa; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[DGEMM| DGEMM on GPU]] [[http://www.ncic.ac.cn/~tgm/images/1/18/SC11.pdf SC'11] [http://www.ncic.ac.cn/~tgm/images/e/e9/ICS12.pdf ICS'12]]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[DGEMM&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;/Deep Learning&lt;/ins&gt;| DGEMM on GPU]] [&lt;ins class=&quot;diffchange diffchange-inline&quot;&gt;PPoPP'17&amp;#160; ICS'17 &lt;/ins&gt;[http://www.ncic.ac.cn/~tgm/images/1/18/SC11.pdf SC'11] [http://www.ncic.ac.cn/~tgm/images/e/e9/ICS12.pdf ICS'12]]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Dynamic Programming on Multicore]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/SC06.pdf SC'06] [http://www.ncic.ac.cn/~tgm/images/3/3d/SPAA07.pdf SPAA'07] [http://www.ncic.ac.cn/~tgm/images/TPDS09.pdf TPDS'09]]&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;** [[Dynamic Programming on Multicore]] [[http://www.ncic.ac.cn/~tgm/images/c/c3/SC06.pdf SC'06] [http://www.ncic.ac.cn/~tgm/images/3/3d/SPAA07.pdf SPAA'07] [http://www.ncic.ac.cn/~tgm/images/TPDS09.pdf TPDS'09]]&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Architecture&lt;/div&gt;&lt;/td&gt;&lt;td class='diff-marker'&gt;&amp;#160;&lt;/td&gt;&lt;td style=&quot;background: #eee; color:black; font-size: smaller;&quot;&gt;&lt;div&gt;* Architecture&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</summary>
+		<author><name>Tgm</name></author>	</entry>
+
+	</feed>
